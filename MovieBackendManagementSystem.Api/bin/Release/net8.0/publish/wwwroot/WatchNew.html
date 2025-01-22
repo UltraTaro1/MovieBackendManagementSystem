@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻浏览</title>
+    <script src="./lib/axios.js"></script>
+    <script src="./lib/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <style>
+        body {
+            background-color: #938686;
+            /* background-image: url('a.png'); 设置背景图片 */
+            /* background-size: cover; 使背景图片覆盖整个页面 */
+            /* background-position: center; 居中背景图片 */
+        }
+
+        #container {
+            max-width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            background-color: rgba(255, 255, 255,0);
+        }
+        .c1{
+            width: 40%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1,h4 {
+            color: #e8e2e2;
+        }
+
+        p {
+            line-height: 1.5;
+            color:rgb(229, 224, 217)
+        }
+    </style>
+
+    <script>
+        // 在 FilmPlay.html 的 JavaScript 中
+        window.onload = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const newInfoId = urlParams.get('newInfoId');
+    
+            if (newInfoId) {
+                // 使用获取到的 filmId
+                console.log('newInfoId:', newInfoId);
+                // 这里可以进行进一步的处理，例如初始化页面内容等
+            } else {
+                console.error('No filmId found in the URL.');
+            }
+        };
+        </script>
+</head>
+<body>
+    
+        <div id="container">
+            <h1>{{newInfo.newTitle}}</h1>
+            <h4>新闻类型:{{newInfo.newType}}</h4>
+            <h4>作者：{{newInfo.newAuthor}}   发布时间：{{newInfo.publishDatetime}}</h4>
+            <div class="c1">
+                <p>{{newInfo.newContent}}</p>
+            </div>
+            <img :src="newInfo.mainImageUrl" width="60%" height="auto">
+        </div>
+    
+</body>
+<script>
+    var vm = new Vue({
+        el:"#container",
+        data:{
+            newInfo:[]
+        },
+        mounted(){
+            const urlParams = new URLSearchParams(window.location.search);
+            const newInfoId = parseInt(urlParams.get('newInfoId'), 10); 
+            axios.get(`http://localhost:5180/api/News/GetNewsById/${newInfoId}`).then(function(res){
+                vm.newInfo = res.data;
+                console.log(res.data);
+            })
+        }
+    })
+</script>
+</html>

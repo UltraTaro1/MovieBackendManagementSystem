@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="file"] {
+            padding: 10px 0;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>上传新闻</h2>
+    <form id="newsUploadForm" enctype="multipart/form-data">
+        <label for="newTitle">新闻标题：</label>
+        <input type="text" id="newTitle" name="newTitle" required>
+        <div class="error-message" id="newTitleError"></div>
+
+        <label for="newType">新闻类型：</label>
+        <input type="text" id="newType" name="newType" required>
+        <div class="error-message" id="newTypeError"></div>
+
+        <label for="newContent">新闻内容：</label>
+        <textarea id="newContent" name="newContent" required></textarea>
+        <div class="error-message" id="newContentError"></div>
+
+        <label for="summary">新闻摘要：</label>
+        <textarea id="summary" name="summary" required></textarea>
+        <div class="error-message" id="summaryError"></div>
+
+        <label for="newAuthor">新闻作者：</label>
+        <input type="text" id="newAuthor" name="newAuthor" required>
+        <div class="error-message" id="newAuthorError"></div>
+
+        <label for="publishDatetime">发布时间：</label>
+        <input type="datetime-local" id="publishDatetime" name="publishDatetime" required>
+        <div class="error-message" id="publishDatetimeError"></div>
+
+        <label for="imageFile">主图文件：</label>
+        <input type="file" id="mainImage" name="imageFile" accept="image/*">
+        <div class="error-message" id="mainImageError"></div>
+
+        <button type="submit">上传新闻</button>
+    </form>
+
+    <script>
+        document.getElementById('newsUploadForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            try {
+                const response = await fetch('http://localhost:5180/api/News/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.text();
+                alert(result);
+            } catch (error) {
+                alert('上传失败，请检查网络或文件');
+                console.error(error);
+            }
+        });
+    </script>
+</body>
+</html>

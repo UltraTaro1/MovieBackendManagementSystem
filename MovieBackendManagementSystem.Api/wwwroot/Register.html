@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/axios.js"></script>
+    <script src="./lib/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+    <div id="registPage">
+        <div class="regist-pad">
+            <h2>用户注册</h2>
+            <el-input v-model="userName" placeholder="请输入用户名"></el-input>
+            <el-input v-model="userNo" placeholder="请输入用户账号"></el-input>
+            <el-input v-model="password" placeholder="请输入登录密码" show-password="true"></el-input>
+            <el-button type="primary" @click="regist">注册</el-button>
+        </div>
+        
+    </div>
+    
+</body>
+<script>
+    let vm = new Vue({
+        el:"#registPage",
+        data:{
+            userName : "",
+            userNo : "",
+            password : ""
+        },
+        methods:{
+            regist: function() {
+                // 检查输入是否都已填写
+                if (!this.userName || !this.userNo || !this.password) {
+                    alert("用户信息不能为空。");
+                    return; // 停止执行后续代码
+                }
+
+                // 如果数据不为空，则继续执行原来的注册逻辑
+                axios.post(
+                    "http://localhost:5180/api/Register",
+                    {
+                        userName: this.userName,
+                        userNo: this.userNo,
+                        password: this.password
+                    }
+                ).then(function(res){
+                    if (res.data === "注册成功") { // 注意这里应该是===，原代码中使用了赋值操作符=
+                        alert("注册成功");
+                        location.reload();
+                    } else {
+                    alert("注册失败");
+                    }
+                });
+            }
+        }
+    })
+</script>
+<style>
+    .regist-pad{
+        width: 400px;
+        padding: 20px;
+        margin: auto;
+        margin-top: 10%;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-shadow:0 0 10px #ccc;
+    }
+    h2{
+        text-align: center;
+        margin-top: 0;
+    }
+    .el-input{
+        margin-bottom: 20px;
+    }
+    .el-button{
+        width: 100%;
+    }
+</style>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑电影信息</title>
+    <script src="./lib/axios.js"></script>
+    <script src="./lib/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+    <div id="editFilm">
+        <div class="head">
+            <h2>编辑电影信息</h2>
+        </div>
+        <div class="content">
+            <el-input v-model="filmType" placeholder="电影类型"></el-input>
+            <el-input v-model="filmTitle" placeholder="电影标题"></el-input>
+            <el-input v-model="filmIntroduction" placeholder="电影简介"></el-input>
+            <el-input v-model="filmDirector" placeholder="导演"></el-input>
+            <el-input v-model="filmPerformer" placeholder="主演"></el-input>
+            <el-date-picker v-model="releaseTime" type="datetime" placeholder="选择上映时间"></el-date-picker>
+            <el-button type="primary" @click="keep">保存</el-button>
+        </div>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:"#editFilm",
+        data:{
+            filmId : null,
+            filmType:null,
+            filmTitle:null,
+            filmIntroduction:null,
+            filmDirector:null,
+            filmPerformer:null,
+            releaseTime:null
+        },
+        methods:{
+            keep:function(){
+                let filmIdStr = sessionStorage.getItem("filmId");
+                this.filmId = parseInt(filmIdStr, 10); // 使用parseInt转换为整数 f
+                axios.put(
+                    "http://localhost:5180/api/Film",{
+                        filmId:this.filmId,
+                        filmType:this.filmType,
+                        filmTitle:this.filmTitle,
+                        filmIntroduction:this.filmIntroduction,
+                        filmDirector:this.filmDirector,
+                        filmPerformer:this.filmPerformer,
+                        releaseTime:this.releaseTime,
+                        videoPath:null,
+                        CoverImagePath:null
+                    }
+                ).then(function(res){
+                    if(res.data==="更新成功"){
+                        alert("更新成功");
+                    }
+                    else{
+                        alert("更新失败")
+                    }
+
+                })
+            }
+        }
+    })
+</script>
+</html>

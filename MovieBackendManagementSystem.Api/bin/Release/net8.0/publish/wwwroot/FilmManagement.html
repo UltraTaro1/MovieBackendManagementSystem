@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>影片管理</title>
+    <script src="./lib/axios.js"></script>
+    <script src="./lib/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+    <div id="Film-Management">
+        <div class="head">
+            <h2>影片管理</h2>
+        </div>
+        <div class="content">
+            <div class="search">
+                <el-form inline>
+                    <el-form-item label="">
+                        <el-input v-model="input" placeholder="请输入电影标题"></el-input>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-button type="primary" icon="el-icon-search" v-on:click="search">搜索</el-button>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-button type="primary" icon="el-icon-search" v-on:click="searchAllFiml">全部影片</el-button>
+                    </el-form-item>
+                </el-form>
+            </div>
+            <div class="table">
+                <el-table
+                    :data="tableData"
+                    style="width: 100%">
+                <!-- <el-table-column 
+                    prop="filmId" 
+                    label="电影Id" 
+                    width="180">
+                </el-table-column> -->
+                <el-table-column
+                    prop="filmType"
+                    label="电影类型"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    prop="filmTitle"
+                    label="电影标题"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    prop="filmIntroduction"
+                    label="电影简介"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    prop="filmDirector"
+                    label="导演"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    prop="filmPerformer"
+                    label="主演"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    prop="releaseTime"
+                    label="上映时间"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    label="电影封面"
+                    width="180">
+                    <template slot-scope="scope">
+                        <img :src="scope.row.coverImagePath" alt="电影封面" style="max-width: 100%; height: auto;">
+                    </template>
+                </el-table-column>
+                <el-table-column
+                    fixed="right"
+                    label="操作"
+                    width="100">
+                    <template slot-scope="scope">
+                        <el-button type="text" size="small" @click="watchFilm(scope.row)">观看电影</el-button>
+                        <el-button type="text" size="small" @click="editFilm(scope.row)">编辑</el-button>
+                        <el-button type="text" size="small" @click="deleteFilm(scope.row)">删除</el-button>
+                    </template>
+                </el-table-column>
+            </div>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el:'#Film-Management',
+            data: {
+                input: '',
+                tableData: []
+            },
+            methods:{
+                search() {
+                    var vm = this;
+                    var input = this.input;
+                    if(!input){
+                        alert('请输入电影标题');
+                        return;
+                    }
+                    axios.get(`http://localhost:5180/api/Film/searchchFilmByTitle/${input}`).then(function (res) {
+                        if(res.data.length == 0){
+                            alert('未找到该电影');
+                            return;
+                        }
+                        vm.tableData = res.data;
+
+                        console.log(vm.tableData);
+                    })
+                },
+                searchAllFiml() {
+                    var vm = this;
+                    axios.get(`http://localhost:5180/api/Film/getAllFilms`).then(function (res) {
+                        if(res.data.length == 0){
+                            alert('未找到该电影');
+                            return;
+                        }
+                        vm.tableData = res.data;
+                    })
+                },
+                editFilm(film){
+                    sessionStorage.setItem('filmId', film.filmId);
+                    window.open('./EditFilm.html','_blank');
+                },
+                deleteFilm(film){
+                    axios.delete(`http://localhost:5180/api/Film/${film.filmId}`).then(function(res){
+                        if(res.data=="电影删除成功"){
+                            alert("电影删除成功");
+                            location.reload();
+                        }
+                        else{
+                            alert("电影删除失败")
+                        }
+                    })
+                },
+                watchFilm(film){
+                    axios.get(`http://localhost:5180/api/Film/searchFilmById/${film.filmId}`).then(function(res){
+                        window.open(`./FilmPlay.html?filmId=${film.filmId}`);
+                    })
+                }
+
+            }
+        })
+    </script>
+</body>
+<style>
+    body{
+        background-color: lightblue;
+    }
+    h2{
+        text-align: center;
+        color: rgb(248, 176, 22);
+        font-size: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        background-color: rgb(255, 255, 255);
+    }
+    .search{
+        float: right;
+    }
+    .search input{
+        width: 300px;
+        height: 40px;
+        border: 1px solid rgb(255, 255, 255);
+        display: inline-block;
+    }
+    .search button{
+        height: 40px;
+        display: inline-block;
+    }
+</style>
+</html>

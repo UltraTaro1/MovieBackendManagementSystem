@@ -1,0 +1,2082 @@
+{
+  "Version": 1,
+  "Hash": "cBHOyBGFQMP4NSB2Xv9GEQpBimW/epcM16NEj0Ot6j8=",
+  "Source": "MovieBackendManagementSystem.Api",
+  "BasePath": "_content/MovieBackendManagementSystem.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MovieBackendManagementSystem.Api\\wwwroot",
+      "Source": "MovieBackendManagementSystem.Api",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\AddNews.html",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "AddNews#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "egukd5tjep",
+      "Integrity": "Lsi2lMeYRaYH5A8vXIh9XRSqw4Q1KBIMF+XIezXkNjo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\AddNews.html"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\EditFilm.html",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "EditFilm#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6oprsa2tl7",
+      "Integrity": "th4obEqbgthDbLXEhEqcNanZtcN2mjoX+qTz/H481Ek=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\EditFilm.html"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\EditNew.html",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "EditNew#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3bknhn42c4",
+      "Integrity": "cQxCtbIZDTjadK32sYsBuYC1t0LufnTCx1rarRp7B/c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\EditNew.html"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\FilmClassification.html",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "FilmClassification#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "di5blbj9b4",
+      "Integrity": "paHwP2LIO+Y/HiCoEsvTfF9t2XA9vkGqQFb/xMTHOl0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\FilmClassification.html"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\FilmManagement.html",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "FilmManagement#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rmu0rwp6c7",
+      "Integrity": "EybvBt9cnXQKvjvVvN5skHwU3bjRrNE3uzG5qp4Cv7g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\FilmManagement.html"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\FilmPlay.html",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "FilmPlay#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "og8b5lgh55",
+      "Integrity": "mNjz3Po9popRk4bUl57OlLuRJGocYRNI5t+nVmeFfzA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\FilmPlay.html"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Homepage.html",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "Homepage#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4xwwz74rz3",
+      "Integrity": "qO2ODvyP/AN6ohoubg8i6OrmbON+FHkHe4OoR5BRuo0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Homepage.html"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Image\\a.png",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "Image/a#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lzqlvv5vj2",
+      "Integrity": "4eajkE4BOCoANqcnO+mYYb4M4nvAOw4GR2Ii2PklyLU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\a.png"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Image\\MainPage.jpg",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "Image/MainPage#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f8jd4yc9le",
+      "Integrity": "n+4bUveHjmlxrGSkDRQzfwaVTzy5raKGziCUru2tFws=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\MainPage.jpg"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\axios.js",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "lib/axios#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cbn34jc7ib",
+      "Integrity": "yMjJZksOZ5kpcMDIA+wKKmxK52mzdoZ3XLW/d0w3ug0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\axios.js"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\elementui.css",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "lib/elementui#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "snzjcn9gf8",
+      "Integrity": "uOxepslYlUia6McREIXxLF/tRocMU70W192Kdl6GjsU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\elementui.css"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\elementui.js",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "lib/elementui#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hh3fn4513k",
+      "Integrity": "m6mgyz/7rnOqhT8HwSihTSfp1cqinykJi9AZ+Kp1ARE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\elementui.js"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\fonts\\element-icons.ttf",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "lib/fonts/element-icons#[.{fingerprint}]?.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "do3f0csfny",
+      "Integrity": "ow9bO6akiCLq4EHgylQSookSXkumYdBH2uVlrEO0prI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\fonts\\element-icons.ttf"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\fonts\\element-icons.woff",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "lib/fonts/element-icons#[.{fingerprint}]?.woff",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "54kq3xh7cr",
+      "Integrity": "q0CliXK+LOqzLn412rMTG5WarmODXXvaGnmuUfmnPBc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\fonts\\element-icons.woff"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\vue.js",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "lib/vue#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f8u7lci2m8",
+      "Integrity": "MeYOqF3zQduBYKcoB3SoLxmCFyyXgn531LesmUsKd/I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\vue.js"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Login.html",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "Login#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "047x9hn41y",
+      "Integrity": "QJ//yxnh1qoFgw6entNaS1ZE6YTMDRPz/0cZ9tOk8ZA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Login.html"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\NewsManagement.html",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "NewsManagement#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bsqdkqrn6t",
+      "Integrity": "JYsYjDok6aG2fwC5NNXjan4W7gc/N0nDn1lOuFBOG5s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\NewsManagement.html"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Register.html",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "Register#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "spzsrg02p7",
+      "Integrity": "MKGLaLMkfDS08gXdd6E4kubfvbtlM9eNtrUyY9f8d2g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Register.html"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Upload.html",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "Upload#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "107x92z66v",
+      "Integrity": "sUKq0CorNjRceYXnG1HobKALKm9eaI1kMDWbVZZv4h8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload.html"
+    },
+    {
+      "Identity": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\WatchNew.html",
+      "SourceId": "MovieBackendManagementSystem.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\",
+      "BasePath": "_content/MovieBackendManagementSystem.Api",
+      "RelativePath": "WatchNew#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "splxi20iwk",
+      "Integrity": "0PlkQH0UfF3cMV89bOzHkG1duIMwndcEm6h47g8XVU4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\WatchNew.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "AddNews.egukd5tjep.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\AddNews.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3975"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Lsi2lMeYRaYH5A8vXIh9XRSqw4Q1KBIMF+XIezXkNjo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "egukd5tjep"
+        },
+        {
+          "Name": "label",
+          "Value": "AddNews.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Lsi2lMeYRaYH5A8vXIh9XRSqw4Q1KBIMF+XIezXkNjo="
+        }
+      ]
+    },
+    {
+      "Route": "AddNews.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\AddNews.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3975"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Lsi2lMeYRaYH5A8vXIh9XRSqw4Q1KBIMF+XIezXkNjo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Lsi2lMeYRaYH5A8vXIh9XRSqw4Q1KBIMF+XIezXkNjo="
+        }
+      ]
+    },
+    {
+      "Route": "EditFilm.6oprsa2tl7.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\EditFilm.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2704"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"th4obEqbgthDbLXEhEqcNanZtcN2mjoX+qTz/H481Ek=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6oprsa2tl7"
+        },
+        {
+          "Name": "label",
+          "Value": "EditFilm.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-th4obEqbgthDbLXEhEqcNanZtcN2mjoX+qTz/H481Ek="
+        }
+      ]
+    },
+    {
+      "Route": "EditFilm.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\EditFilm.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2704"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"th4obEqbgthDbLXEhEqcNanZtcN2mjoX+qTz/H481Ek=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-th4obEqbgthDbLXEhEqcNanZtcN2mjoX+qTz/H481Ek="
+        }
+      ]
+    },
+    {
+      "Route": "EditNew.3bknhn42c4.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\EditNew.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2808"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cQxCtbIZDTjadK32sYsBuYC1t0LufnTCx1rarRp7B/c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3bknhn42c4"
+        },
+        {
+          "Name": "label",
+          "Value": "EditNew.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cQxCtbIZDTjadK32sYsBuYC1t0LufnTCx1rarRp7B/c="
+        }
+      ]
+    },
+    {
+      "Route": "EditNew.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\EditNew.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2808"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cQxCtbIZDTjadK32sYsBuYC1t0LufnTCx1rarRp7B/c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cQxCtbIZDTjadK32sYsBuYC1t0LufnTCx1rarRp7B/c="
+        }
+      ]
+    },
+    {
+      "Route": "FilmClassification.di5blbj9b4.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\FilmClassification.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7124"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHwP2LIO+Y/HiCoEsvTfF9t2XA9vkGqQFb/xMTHOl0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "di5blbj9b4"
+        },
+        {
+          "Name": "label",
+          "Value": "FilmClassification.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHwP2LIO+Y/HiCoEsvTfF9t2XA9vkGqQFb/xMTHOl0="
+        }
+      ]
+    },
+    {
+      "Route": "FilmClassification.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\FilmClassification.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7124"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHwP2LIO+Y/HiCoEsvTfF9t2XA9vkGqQFb/xMTHOl0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHwP2LIO+Y/HiCoEsvTfF9t2XA9vkGqQFb/xMTHOl0="
+        }
+      ]
+    },
+    {
+      "Route": "FilmManagement.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\FilmManagement.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6802"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EybvBt9cnXQKvjvVvN5skHwU3bjRrNE3uzG5qp4Cv7g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EybvBt9cnXQKvjvVvN5skHwU3bjRrNE3uzG5qp4Cv7g="
+        }
+      ]
+    },
+    {
+      "Route": "FilmManagement.rmu0rwp6c7.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\FilmManagement.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6802"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EybvBt9cnXQKvjvVvN5skHwU3bjRrNE3uzG5qp4Cv7g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rmu0rwp6c7"
+        },
+        {
+          "Name": "label",
+          "Value": "FilmManagement.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EybvBt9cnXQKvjvVvN5skHwU3bjRrNE3uzG5qp4Cv7g="
+        }
+      ]
+    },
+    {
+      "Route": "FilmPlay.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\FilmPlay.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2734"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mNjz3Po9popRk4bUl57OlLuRJGocYRNI5t+nVmeFfzA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mNjz3Po9popRk4bUl57OlLuRJGocYRNI5t+nVmeFfzA="
+        }
+      ]
+    },
+    {
+      "Route": "FilmPlay.og8b5lgh55.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\FilmPlay.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2734"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mNjz3Po9popRk4bUl57OlLuRJGocYRNI5t+nVmeFfzA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "og8b5lgh55"
+        },
+        {
+          "Name": "label",
+          "Value": "FilmPlay.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mNjz3Po9popRk4bUl57OlLuRJGocYRNI5t+nVmeFfzA="
+        }
+      ]
+    },
+    {
+      "Route": "Homepage.4xwwz74rz3.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Homepage.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15756"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qO2ODvyP/AN6ohoubg8i6OrmbON+FHkHe4OoR5BRuo0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4xwwz74rz3"
+        },
+        {
+          "Name": "label",
+          "Value": "Homepage.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qO2ODvyP/AN6ohoubg8i6OrmbON+FHkHe4OoR5BRuo0="
+        }
+      ]
+    },
+    {
+      "Route": "Homepage.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Homepage.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15756"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qO2ODvyP/AN6ohoubg8i6OrmbON+FHkHe4OoR5BRuo0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qO2ODvyP/AN6ohoubg8i6OrmbON+FHkHe4OoR5BRuo0="
+        }
+      ]
+    },
+    {
+      "Route": "Image/a.lzqlvv5vj2.png",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Image\\a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1701135"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4eajkE4BOCoANqcnO+mYYb4M4nvAOw4GR2Ii2PklyLU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lzqlvv5vj2"
+        },
+        {
+          "Name": "label",
+          "Value": "Image/a.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4eajkE4BOCoANqcnO+mYYb4M4nvAOw4GR2Ii2PklyLU="
+        }
+      ]
+    },
+    {
+      "Route": "Image/a.png",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Image\\a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1701135"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4eajkE4BOCoANqcnO+mYYb4M4nvAOw4GR2Ii2PklyLU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4eajkE4BOCoANqcnO+mYYb4M4nvAOw4GR2Ii2PklyLU="
+        }
+      ]
+    },
+    {
+      "Route": "Image/MainPage.f8jd4yc9le.jpg",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Image\\MainPage.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77647"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n+4bUveHjmlxrGSkDRQzfwaVTzy5raKGziCUru2tFws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f8jd4yc9le"
+        },
+        {
+          "Name": "label",
+          "Value": "Image/MainPage.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-n+4bUveHjmlxrGSkDRQzfwaVTzy5raKGziCUru2tFws="
+        }
+      ]
+    },
+    {
+      "Route": "Image/MainPage.jpg",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Image\\MainPage.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77647"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n+4bUveHjmlxrGSkDRQzfwaVTzy5raKGziCUru2tFws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-n+4bUveHjmlxrGSkDRQzfwaVTzy5raKGziCUru2tFws="
+        }
+      ]
+    },
+    {
+      "Route": "lib/axios.cbn34jc7ib.js",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\axios.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "119534"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yMjJZksOZ5kpcMDIA+wKKmxK52mzdoZ3XLW/d0w3ug0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cbn34jc7ib"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/axios.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yMjJZksOZ5kpcMDIA+wKKmxK52mzdoZ3XLW/d0w3ug0="
+        }
+      ]
+    },
+    {
+      "Route": "lib/axios.js",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\axios.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "119534"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yMjJZksOZ5kpcMDIA+wKKmxK52mzdoZ3XLW/d0w3ug0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yMjJZksOZ5kpcMDIA+wKKmxK52mzdoZ3XLW/d0w3ug0="
+        }
+      ]
+    },
+    {
+      "Route": "lib/elementui.css",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\elementui.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198511"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uOxepslYlUia6McREIXxLF/tRocMU70W192Kdl6GjsU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uOxepslYlUia6McREIXxLF/tRocMU70W192Kdl6GjsU="
+        }
+      ]
+    },
+    {
+      "Route": "lib/elementui.hh3fn4513k.js",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\elementui.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542433"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m6mgyz/7rnOqhT8HwSihTSfp1cqinykJi9AZ+Kp1ARE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hh3fn4513k"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/elementui.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m6mgyz/7rnOqhT8HwSihTSfp1cqinykJi9AZ+Kp1ARE="
+        }
+      ]
+    },
+    {
+      "Route": "lib/elementui.js",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\elementui.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542433"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m6mgyz/7rnOqhT8HwSihTSfp1cqinykJi9AZ+Kp1ARE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m6mgyz/7rnOqhT8HwSihTSfp1cqinykJi9AZ+Kp1ARE="
+        }
+      ]
+    },
+    {
+      "Route": "lib/elementui.snzjcn9gf8.css",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\elementui.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198511"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uOxepslYlUia6McREIXxLF/tRocMU70W192Kdl6GjsU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "snzjcn9gf8"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/elementui.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uOxepslYlUia6McREIXxLF/tRocMU70W192Kdl6GjsU="
+        }
+      ]
+    },
+    {
+      "Route": "lib/fonts/element-icons.54kq3xh7cr.woff",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\fonts\\element-icons.woff",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28200"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/font-woff"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"q0CliXK+LOqzLn412rMTG5WarmODXXvaGnmuUfmnPBc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "54kq3xh7cr"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/fonts/element-icons.woff"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-q0CliXK+LOqzLn412rMTG5WarmODXXvaGnmuUfmnPBc="
+        }
+      ]
+    },
+    {
+      "Route": "lib/fonts/element-icons.do3f0csfny.ttf",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\fonts\\element-icons.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "55956"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ow9bO6akiCLq4EHgylQSookSXkumYdBH2uVlrEO0prI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "do3f0csfny"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/fonts/element-icons.ttf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ow9bO6akiCLq4EHgylQSookSXkumYdBH2uVlrEO0prI="
+        }
+      ]
+    },
+    {
+      "Route": "lib/fonts/element-icons.ttf",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\fonts\\element-icons.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "55956"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ow9bO6akiCLq4EHgylQSookSXkumYdBH2uVlrEO0prI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ow9bO6akiCLq4EHgylQSookSXkumYdBH2uVlrEO0prI="
+        }
+      ]
+    },
+    {
+      "Route": "lib/fonts/element-icons.woff",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\fonts\\element-icons.woff",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28200"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/font-woff"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"q0CliXK+LOqzLn412rMTG5WarmODXXvaGnmuUfmnPBc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-q0CliXK+LOqzLn412rMTG5WarmODXXvaGnmuUfmnPBc="
+        }
+      ]
+    },
+    {
+      "Route": "lib/vue.f8u7lci2m8.js",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\vue.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "446774"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MeYOqF3zQduBYKcoB3SoLxmCFyyXgn531LesmUsKd/I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f8u7lci2m8"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/vue.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MeYOqF3zQduBYKcoB3SoLxmCFyyXgn531LesmUsKd/I="
+        }
+      ]
+    },
+    {
+      "Route": "lib/vue.js",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\vue.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "446774"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MeYOqF3zQduBYKcoB3SoLxmCFyyXgn531LesmUsKd/I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MeYOqF3zQduBYKcoB3SoLxmCFyyXgn531LesmUsKd/I="
+        }
+      ]
+    },
+    {
+      "Route": "Login.047x9hn41y.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QJ//yxnh1qoFgw6entNaS1ZE6YTMDRPz/0cZ9tOk8ZA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "047x9hn41y"
+        },
+        {
+          "Name": "label",
+          "Value": "Login.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QJ//yxnh1qoFgw6entNaS1ZE6YTMDRPz/0cZ9tOk8ZA="
+        }
+      ]
+    },
+    {
+      "Route": "Login.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QJ//yxnh1qoFgw6entNaS1ZE6YTMDRPz/0cZ9tOk8ZA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QJ//yxnh1qoFgw6entNaS1ZE6YTMDRPz/0cZ9tOk8ZA="
+        }
+      ]
+    },
+    {
+      "Route": "NewsManagement.bsqdkqrn6t.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\NewsManagement.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6348"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JYsYjDok6aG2fwC5NNXjan4W7gc/N0nDn1lOuFBOG5s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bsqdkqrn6t"
+        },
+        {
+          "Name": "label",
+          "Value": "NewsManagement.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JYsYjDok6aG2fwC5NNXjan4W7gc/N0nDn1lOuFBOG5s="
+        }
+      ]
+    },
+    {
+      "Route": "NewsManagement.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\NewsManagement.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6348"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JYsYjDok6aG2fwC5NNXjan4W7gc/N0nDn1lOuFBOG5s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JYsYjDok6aG2fwC5NNXjan4W7gc/N0nDn1lOuFBOG5s="
+        }
+      ]
+    },
+    {
+      "Route": "Register.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Register.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2681"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MKGLaLMkfDS08gXdd6E4kubfvbtlM9eNtrUyY9f8d2g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MKGLaLMkfDS08gXdd6E4kubfvbtlM9eNtrUyY9f8d2g="
+        }
+      ]
+    },
+    {
+      "Route": "Register.spzsrg02p7.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Register.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2681"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MKGLaLMkfDS08gXdd6E4kubfvbtlM9eNtrUyY9f8d2g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "spzsrg02p7"
+        },
+        {
+          "Name": "label",
+          "Value": "Register.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MKGLaLMkfDS08gXdd6E4kubfvbtlM9eNtrUyY9f8d2g="
+        }
+      ]
+    },
+    {
+      "Route": "Upload.107x92z66v.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Upload.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5081"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sUKq0CorNjRceYXnG1HobKALKm9eaI1kMDWbVZZv4h8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "107x92z66v"
+        },
+        {
+          "Name": "label",
+          "Value": "Upload.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sUKq0CorNjRceYXnG1HobKALKm9eaI1kMDWbVZZv4h8="
+        }
+      ]
+    },
+    {
+      "Route": "Upload.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Upload.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5081"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sUKq0CorNjRceYXnG1HobKALKm9eaI1kMDWbVZZv4h8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sUKq0CorNjRceYXnG1HobKALKm9eaI1kMDWbVZZv4h8="
+        }
+      ]
+    },
+    {
+      "Route": "WatchNew.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\WatchNew.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2899"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0PlkQH0UfF3cMV89bOzHkG1duIMwndcEm6h47g8XVU4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0PlkQH0UfF3cMV89bOzHkG1duIMwndcEm6h47g8XVU4="
+        }
+      ]
+    },
+    {
+      "Route": "WatchNew.splxi20iwk.html",
+      "AssetFile": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\WatchNew.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2899"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0PlkQH0UfF3cMV89bOzHkG1duIMwndcEm6h47g8XVU4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 02:36:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "splxi20iwk"
+        },
+        {
+          "Name": "label",
+          "Value": "WatchNew.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0PlkQH0UfF3cMV89bOzHkG1duIMwndcEm6h47g8XVU4="
+        }
+      ]
+    }
+  ]
+}

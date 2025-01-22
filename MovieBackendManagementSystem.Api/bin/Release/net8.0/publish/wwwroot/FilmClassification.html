@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>影片分类</title>
+    <script src="./lib/axios.js"></script>
+    <script src="./lib/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #app {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .classification {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* 添加此行以添加间隔 */
+            margin-bottom: 10px;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .category {
+            /* 为每个分类项添加背景色和圆角，提升按钮感 */
+            background-color: #f9f9f9;
+            border-radius: 20px;
+            padding: 5px 10px;
+            cursor: pointer; /* 鼠标悬停时显示指针 */
+            transition: background-color 0.3s ease; /* 平滑过渡背景色 */
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .category:hover {
+            /* 鼠标悬停时改变背景色 */
+            background-color: #e0e0e0;
+        }
+
+        .classification h2 {
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .classification.category {
+            margin-bottom: 10px;
+            font-weight: bold;
+            margin-right: 10px; /* 添加此行以添加右侧间隔 */
+        }
+
+        .filmShow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(272.86px, 1fr)); /* 更新列宽以匹配.FilmCoverImage宽度 */
+            gap: 10px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .FilmCoverImage {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            height: 174.54px;
+            margin-bottom: 10px;
+        }
+
+        .FilmCoverImage:hover {
+            transform: translateY(-10px); /* 根据需要调整数值以达到理想浮动效果 */
+            transition: transform 0.3s ease; /* 添加过渡效果使得浮动更平滑 */
+        }
+        .FilmCoverImage img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .film-title-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center; /* 添加此行以实现水平居中 */
+            padding: 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        /* 文字在鼠标悬停时变色 */
+        .film-title-overlay:hover {
+            color: #ffcc00; /* 示例颜色，可根据设计调整 */
+        }
+        .film-title {
+            margin: 0;
+        }
+
+        .filmMeta {
+            display: flex;
+            align-items: center;
+            margin-top: 10px; /* 添加间距 */
+            margin-bottom: 10px;
+            color: #666;
+        }
+        .filmMeta:hover{
+            color: rgb(253, 3, 3);
+        }
+
+        .filmMeta span {
+            margin-right: 10px; /* 添加间隔 */
+            
+        }
+        .filmMeta .performer{
+            display: inline-block; /* 需要将span转换为块级元素或内联块级元素 */
+            max-width: 100px; /* 设置最大宽度，可以根据需要调整 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; /* 不允许换行 */
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="classification">
+            <div v-for="(type, index) in filmTypes"
+                :key="index" 
+                class="classification category"
+                @click="selectCategory(type)">
+                <h2>{{ type }}</h2>
+            </div>
+        </div>
+        <div class="filmShow">
+            <template v-for="film in filteredFilms">
+                <div class="filmMain">
+                    <div class="FilmCoverImage" @click="playFilm(film.filmId)">
+                        <div class="film-info">
+                            <div class="film-title-overlay">
+                                <h3 class="film-title">{{ film.filmTitle }}</h3>
+                            </div>
+                        </div>
+                        <img :src="film.coverImagePath" alt="电影封面">
+                    </div>
+                    <div class="filmMeta">
+                        <span class="performer">{{film.filmPerformer}}</span>
+                        <span>{{film.releaseTime}}</span>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+        
+</body>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            films:[],
+            filmTypes:[],
+            selectedType: "全部"
+        },
+        async mounted() {
+            try {
+                const filmResponse = await axios.get('http://localhost:5180/api/Film/getAllFilms');
+                console.log(filmResponse.data);
+                this.films = filmResponse.data;
+                
+                const newsResponse = await axios.get('http://localhost:5180/api/Film/GetFilmTypes');
+                console.log(newsResponse.data);
+
+                this.filmTypes = newsResponse.data;
+                this.filmTypes.unshift("全部");
+                console.log(this.filmTypes);
+            } catch (error) {
+                console.error("请求失败：" + error);
+            }
+        },
+        computed: { // 计算属性应独立于methods
+            filteredFilms() {
+                if (this.selectedType === "全部") {
+                    return this.films;
+                } else {
+                    return this.films.filter(film => film.filmType === this.selectedType);
+                }
+            }
+        },
+        methods: {
+            playFilm(filmId) {
+                window.open(`./FilmPlay.html?filmId=${filmId}`);
+            },
+            // 新增的 selectCategory 方法
+            selectCategory(type) {
+                this.selectedType = type;
+            }
+
+        },
+        
+        
+    })
+</script>
+</html>

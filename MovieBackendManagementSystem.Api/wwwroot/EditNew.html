@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑新闻信息</title>
+    <script src="./lib/axios.js"></script>
+    <script src="./lib/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+    <div id="editNew">
+        <div class="head">
+            <h2>编辑新闻信息</h2>
+        </div>
+        <div class="content">
+            <el-input v-model="newTitle" placeholder="新闻标题"></el-input>
+            <el-input v-model="newType" placeholder="新闻种类"></el-input>
+            <el-input v-model="summary" placeholder="新闻摘要"></el-input>
+            <el-input v-model="newContent" placeholder="新闻内容"></el-input>
+            <el-input v-model="newAuthor" placeholder="作者"></el-input>
+            <el-date-picker v-model="publishDatetime" type="datetime" placeholder="修改发布时间时间"></el-date-picker>
+            <el-button type="primary" @click="keep">保存</el-button>
+        </div>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:"#editNew",
+        data:{
+            newsId : null,
+            newTitle:null,
+            newType:null,
+            summary:null,
+            newContent:null,
+            newAuthor:null,
+            publishDatetime:null
+        },
+        methods:{
+            keep:function(){
+                let newInforIdStr = sessionStorage.getItem("newInfoId");
+                this.newInfoId = parseInt(newInforIdStr, 10); // 使用parseInt转换为整数 
+                if(confirm("确定要保存这些更改吗？")){
+                    axios.put(
+                        "http://localhost:5180/api/News/UpdateNew",{
+                            newInfoId:this.newInfoId,
+                            newTitle:this.newTitle,
+                            newType:this.newType,
+                            summary:this.summary,
+                            newContent:this.newContent,
+                            newAuthor:this.newAuthor,
+                            publishDatetime:this.publishDatetime,
+                            mainImageUrl:null
+                        }
+                    ).then(function(res){
+                        if(res.data==="更新成功"){
+                            alert("更新成功");
+                        }
+                        else{
+                            alert("更新失败")
+                        }
+                    })
+                }
+            }
+        }
+    })
+</script>
+</html>

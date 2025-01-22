@@ -1,0 +1,105 @@
+{
+  "Files": [
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\AddNews.html",
+      "PackagePath": "staticwebassets\\AddNews.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\EditFilm.html",
+      "PackagePath": "staticwebassets\\EditFilm.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\EditNew.html",
+      "PackagePath": "staticwebassets\\EditNew.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\FilmClassification.html",
+      "PackagePath": "staticwebassets\\FilmClassification.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\FilmManagement.html",
+      "PackagePath": "staticwebassets\\FilmManagement.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\FilmPlay.html",
+      "PackagePath": "staticwebassets\\FilmPlay.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Homepage.html",
+      "PackagePath": "staticwebassets\\Homepage.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Image\\MainPage.jpg",
+      "PackagePath": "staticwebassets\\Image\\MainPage.jpg"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Image\\a.png",
+      "PackagePath": "staticwebassets\\Image\\a.png"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Login.html",
+      "PackagePath": "staticwebassets\\Login.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\NewsManagement.html",
+      "PackagePath": "staticwebassets\\NewsManagement.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Register.html",
+      "PackagePath": "staticwebassets\\Register.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\Upload.html",
+      "PackagePath": "staticwebassets\\Upload.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\WatchNew.html",
+      "PackagePath": "staticwebassets\\WatchNew.html"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\axios.js",
+      "PackagePath": "staticwebassets\\lib\\axios.js"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\elementui.css",
+      "PackagePath": "staticwebassets\\lib\\elementui.css"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\elementui.js",
+      "PackagePath": "staticwebassets\\lib\\elementui.js"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\fonts\\element-icons.ttf",
+      "PackagePath": "staticwebassets\\lib\\fonts\\element-icons.ttf"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\fonts\\element-icons.woff",
+      "PackagePath": "staticwebassets\\lib\\fonts\\element-icons.woff"
+    },
+    {
+      "Id": "c:\\Users\\Administrator\\Desktop\\MovieBackendManagementSystem\\MovieBackendManagementSystem.Api\\wwwroot\\lib\\vue.js",
+      "PackagePath": "staticwebassets\\lib\\vue.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MovieBackendManagementSystem.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MovieBackendManagementSystem.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MovieBackendManagementSystem.Api.props",
+      "PackagePath": "build\\MovieBackendManagementSystem.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MovieBackendManagementSystem.Api.props",
+      "PackagePath": "buildMultiTargeting\\MovieBackendManagementSystem.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MovieBackendManagementSystem.Api.props",
+      "PackagePath": "buildTransitive\\MovieBackendManagementSystem.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻管理</title>
+    <script src="./lib/axios.js"></script>
+    <script src="./lib/vue.js"></script>
+    <!-- 引入样式 -->a
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+    <div id="newsManagement">
+        <div class="head">
+            <h2>新闻管理</h2>
+        </div>
+        <div class="body">
+            <div class="search">
+                <el-form inline>
+                    <el-form-item label="">
+                        <el-input v-model="input" placeholder="请输入新闻类型"></el-input>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-button type="primary" icon="el-icon-search" v-on:click="search">搜索</el-button>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-button type="primary" icon="el-icon-search" v-on:click="searchAllNews">全部新闻</el-button>
+                    </el-form-item>
+                </el-form>
+            </div>
+            <div class="table">
+                <el-table
+                    :data="tableData"
+                    style="width: 100%">
+                
+                <el-table-column
+                    prop="newType"
+                    label="新闻类型"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    prop="newTitle"
+                    label="新闻标题"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    prop="summary"
+                    label="新闻摘要"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    prop="newContent"
+                    label="新闻内容"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    prop="newAuthor"
+                    label="作者"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    prop="publishDatetime"
+                    label="发布时间"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    label="新闻主图"
+                    width="180">
+                    <template slot-scope="scope">
+                        <img :src="scope.row.mainImageUrl" alt="新闻主图" style="max-width: 100%; height: auto;">
+                    </template>
+                </el-table-column>
+                <el-table-column
+                    fixed="right"
+                    label="操作"
+                    width="100">
+                    <template slot-scope="scope">
+                        <el-button type="text" size="small" @click="watchNew(scope.row)">打开新闻</el-button>
+                        <el-button type="text" size="small" @click="editNew(scope.row)">编辑</el-button>
+                        <el-button type="text" size="small" @click="deleteNew(scope.row)">删除</el-button>
+                    </template>
+                </el-table-column>
+            </div>
+        </div>
+    </div>
+    <script>
+        var vm = new Vue({
+            el:"#newsManagement",
+            data:{
+                input:'',
+                tableData:[]
+            },
+            methods:{
+                search() {
+                    var vm = this;
+                    var input = this.input;
+                    if(!input){
+                        alert('请输入新闻类型');
+                        return;
+                    }
+                    axios.get(`http://localhost:5180/api/News/GetNewsByType/${input}`).then(function (res) {
+                        if(res.data.length == 0){
+                            alert('未找到该电影');
+                            return;
+                        }
+                        vm.tableData = res.data;
+
+                        console.log(vm.tableData);
+                    })
+                },
+                searchAllNews() {
+                    var vm = this;
+                    axios.get(`http://localhost:5180/api/News/GetAllNews`).then(function (res) {
+                        if(res.data.length == 0){
+                            alert('未找到电影');
+                            return;
+                        }
+                        vm.tableData = res.data;
+                    })
+                },
+                editNew(newinfo){
+                    sessionStorage.setItem('newInfoId', newinfo.newInfoId);
+                    window.open('./EditNew.html', '_blank');
+                },
+                deleteNew(newinfo) {
+                    // 添加确认对话框
+                    if (confirm("确定要删除这条新闻吗？")) {
+                        axios.delete(`http://localhost:5180/api/News/DeleteNewById/${newinfo.newInfoId}`).then(function (res) {
+                            if (res.data === "新闻删除成功") {
+                                alert("新闻删除成功");
+                                location.reload();
+                            } else {
+                                alert("新闻删除失败");
+                            }
+                        }).catch(function (error) {
+                            // 处理可能的错误
+                            alert("删除过程中发生错误，请重试。");
+                            console.error("Delete error:", error);
+                        });
+                    }
+                },
+                watchNew(newinfo){
+                    axios.get(`http://localhost:5180/api/News/GetNewsById/${newinfo.newInfoId}`).then(function(res){
+                        window.open(`./WatchNew.html?newInfoId=${newinfo.newInfoId}`);
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>

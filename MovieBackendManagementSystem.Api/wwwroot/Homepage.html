@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/axios.js"></script>
+    <script src="./lib/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico&display=swap">
+</head>
+<body>
+    <div id="app">
+        <div class="head">
+            <div class="Navigation_bar">
+                <!-- 导航栏 -->
+                <el-menu mode="horizontal" theme="dark"  @select="handleSelect" >
+                    <el-menu-item index="1" @click.stop="checkLogin && NavigationToFilmManagement">影片管理</el-menu-item>
+                    <el-menu-item index="2" @click.stop="checkLogin && navigateToUpload">影片上传</el-menu-item>
+                    <el-menu-item index="3" @click.stop="checkLogin && NewInfoManagement">新闻管理</el-menu-item>
+                    <el-menu-item index="4" @click.stop="checkLogin && navigateAddNews">新闻上传</el-menu-item>
+                    <el-menu-item index="5" @click.stop="checkLogin && FilmClassification">分类观看</el-menu-item>
+                    <div class="right-links">
+                        <div class="not-login" v-if="userName==null">
+                            <span><a href="./Login.html" >登录</a></span>
+                            <span><a href="./Register.html" >注册</a></span>
+                        </div>
+                        <div class="logined" v-else>
+                            <span>{{userName}}</span>
+                            <span @click="logout">注销</span>
+                        </div>
+                    </div>
+                </el-menu>
+            </div>
+            <div class="system-title" :style="{ 
+                textAlign: 'center', 
+                fontSize: '2.5em', 
+                fontWeight: 'bold', 
+                color: '#333333', /* 深灰色字体，与浅灰色背景形成对比 */
+                letterSpacing: '1px', 
+                lineHeight: '1.5', 
+                fontFamily: 'Roboto, sans-serif', 
+                textShadow: '0 1px 2px rgba(0, 0, 0, 0.2)', 
+                backgroundColor: '#F5F5F5', /* 浅灰色背景 */
+                padding: '10px 20px', 
+                borderRadius: '5px', 
+                boxShadow: '0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12)' 
+            }">电影后台管理系统</div>
+            <br>
+            <div class="Carousel_chart">
+                <!-- 轮播图 -->
+                <template>
+                    <div>
+                        <el-carousel :interval="4000" type="card" height="400px">
+                            <el-carousel-item v-for="(item, index) in images" :key="index" @click.native="carouselItemClick(index)">
+                                <img :src="item" :alt="`Image ${index + 1}`" class="carousel-image" />
+                            </el-carousel-item>
+                        </el-carousel>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <div class="body">
+            <div class="newsTitle">最新浏览</div>
+            <div class="NewBrowsing">
+                <!-- <template v-for="news in newsInfo">
+                    <div class="news-row">
+                        <div class="news-item">
+                            <div class="image-container">
+                                <img :src="news.mainImageUrl" alt="新闻主图">
+                            </div>
+                            <div class="content-container">
+                                <p class="summary">{{news.summary}}</p>
+                                <div class="meta-info">
+                                    <span>{{news.newAuthor}}</span>
+                                    <span>{{news.publishDatetime}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template> -->
+                <template v-for="news in newsInfo">
+                    <div class="news-item" @click="navigateToWatchNew(news.newInfoId)">
+                        <span class="news-item-left">
+                            <img :src="news.mainImageUrl" alt="新闻主图" @click.stop="navigateToWatchNew(news.newInfoId)">
+                        </span>
+                        <span class="news-item-right">
+                            <!-- 修改 .newsSummary 类 -->
+                            <div class="newsSummary" :class="{ fade: isFade }" @click="navigateToWatchNew(news.newInfoId); toggleFade()">
+                                <!-- 添加toggleFade方法调用 -->
+                                <p>{{news.summary}}</p>
+                            </div>
+                            <div class="footer">
+                                <span>{{news.newAuthor}}</span>
+                                <span>{{news.publishDatetime}}</span>
+                            </div>
+                        </span>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        menuAlign: 'right',
+        data:{
+            userName:sessionStorage["username"],
+            films:[],
+            images: [],
+            newsInfo: [], // 用于存储电影对象
+            isFade:false
+        },
+        async mounted() {
+            try {
+                const filmResponse = await axios.get('http://localhost:5180/api/Film/getAllFilms');
+                console.log(filmResponse.data);
+                this.films = filmResponse.data;
+                // 将电影数据的图片URL添加到轮播图数组
+                this.images = this.films.map(film => film.coverImagePath);
+
+
+                const newsResponse = await axios.get('http://localhost:5180/api/News/GetAllNews');
+                console.log(newsResponse.data);
+                this.newsInfo = newsResponse.data;
+
+            } catch (error) {
+                console.error("请求失败：" + error);
+            }
+        },
+        methods:{
+            checkLogin: function() {
+                if (!this.userName) {
+                    alert('请先登录');
+                    return false;
+                }
+                return true;
+            },
+            logout:function(){
+                sessionStorage.clear();
+                this.userName = null;
+                location.reload(true);
+            },
+            // 在需要检查登录状态的函数前调用checkLogin
+            navigateToUpload: function() {
+                //event.stopPropagation(); // 阻止事件冒泡
+                if (this.checkLogin()) {
+                    window.location.href = './Upload.html';
+                }
+            },
+            NavigationToFilmManagement: function() {
+                event.stopPropagation(); // 阻止事件冒泡
+                if (this.checkLogin()) {
+                    window.location.href = './FilmManagement.html';
+                }
+            },
+            navigateAddNews: function() {
+                event.stopPropagation(); // 阻止事件冒泡
+                if (this.checkLogin()) {
+                    window.location.href = './AddNews.html';
+                }
+            },
+            NewInfoManagement:function(){
+                event.stopPropagation(); // 阻止事件冒泡
+                if (this.checkLogin()) {
+                    window.location.href = './NewsManagement.html';
+                }
+            },
+            FilmClassification:function(){
+                event.stopPropagation(); // 阻止事件冒泡
+                if (this.checkLogin()) {
+                    window.location.href = './FilmClassification.html';
+                }
+            },
+            handleSelect(key, keyPath) {
+                event.preventDefault(); // 阻止默认行为
+                if(key === '1') {
+                    this.NavigationToFilmManagement();
+                }
+                if(key === '2') { // 假设"影片上传"的索引是2
+                    this.navigateToUpload();
+                }
+                if(key === '3') {
+                    this.NewInfoManagement();
+                }
+                if(key == '4') {
+                    this.navigateAddNews();
+                } 
+                if(key == '5') {
+                    this.FilmClassification();
+                }
+                
+                // 这里可以添加更多选项的处理逻辑
+            },
+            getFilmIdByIndex(index) {
+                // 假设你的films数组与images顺序相同，并具有必要的id结构
+                return this.films[index]?.filmId; // 使用可选链操作符避免越界错误
+            },
+            
+            carouselItemClick(index) {
+                event.stopPropagation(); // 阻止事件冒泡
+                const filmId = this.getFilmIdByIndex(index);
+                if (filmId !== undefined) {
+                    window.open(`./FilmPlay.html?filmId=${filmId}`);
+                } else {
+                    console.warn('未找到与点击索引对应的电影ID。');
+                }
+            },
+            navigateToWatchNew(newInfoId) {
+                // 使用window.open打开新页面，也可以用location.href替换当前页面
+                window.open(`./WatchNew.html?newInfoId=${newInfoId}`);
+            },
+            toggleFade() {
+                this.isFade = !this.isFade;
+            },
+            
+        }
+    })
+</script>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        /* 让宽度包含于内边距 */
+        box-sizing: border-box;
+    }
+    
+    .head {
+        background-image: url('./Image/MainPage.jpg'); /* 替换为你的背景图片URL */
+        background-size: cover; /* 背景图片自适应填充整个区域 */
+        background-position: center; /* 图片居中 */
+        background-repeat: no-repeat; /* 防止图片平铺 */
+        padding: 50px 0; /* 添加内边距，为内容留出空间 */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果，增加立体感 */
+        transition: background-image 0.5s ease; /* 添加过渡效果，平滑切换背景图片 */
+        position: relative; /* 为其他元素定位到头部之上做准备 */
+    }
+
+    .head::before { /* 创建一个伪元素，用于添加透明渐变覆盖层 */
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%);
+        z-index: 1; /* 确保伪元素在背景图片之上 */
+    }
+    img{
+        height: 300px;
+    }
+    a{
+        text-decoration: none;
+        color: #181616;
+        
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    .Navigation_bar {
+        position: sticky;
+        top: 0;
+        z-index: 1000; /* 确保导航栏在最上层 */
+        background-color: rgba(0, 0, 0, 0); /* 设置为完全透明 */
+        backdrop-filter: blur(5px); /* 可选，给透明背景添加模糊效果，提升视觉体验 */
+        /* 如果需要半透明效果，可以使用 rgba(0, 0, 0, 0.5) 这样的值 */
+        /* text-align:right; */
+    }
+    .system-title{
+        /* margin-left: 20px; */
+        
+    }
+    
+    .el-menu--horizontal {
+         background-color: transparent !important; /* 确保Element UI的菜单也是透明的 */
+    }
+
+    .el-menu--horizontal > .el-menu-item {
+        color: #161414 !important; /* 设置菜单项文字为白色 */
+    }
+    .el-carousel__item h3 {
+        color: #090b0d;
+        font-size: 14px;
+        opacity: 0.75;
+        line-height: 200px;
+        margin: 0;
+    }
+  
+    .el-carousel__item:nth-child(2n) {
+        background-color: #99a9bf;
+    }
+  
+    .el-carousel__item:nth-child(2n+1) {
+        background-color: #d3dce6;
+    }
+    .right-links {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+
+    .right-links .not-login,
+    .right-links .logined {
+        display: inline-block;
+        margin-left: auto;
+    }
+    .carousel-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 保持图片比例 */
+    }
+    
+    .Carousel_chart {
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+    .newsTitle {
+        font-size: 24px; /* 增大字体大小 */
+        font-weight: 700; /* 使用更粗的字体权重 */
+        line-height: 1.5; /* 提高行高，增加阅读舒适度 */
+        margin: 40px 0; /* 合并上下外边距 */
+        text-align: center; /* 居中对齐 */
+        color: #333; /* 保留原有颜色 */
+        text-decoration: underline; /* 添加下划线，增加视觉效果 */
+        text-underline-offset: 2px; /* 调整下划线下移距离，避免遮挡文字 */
+    }
+    .NewBrowsing {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .news-item {
+        display: flex;
+        align-items: flex-start; /* 保持内容顶部对齐 */
+        margin-bottom: 10px; /* 可选，为每个新闻添加一些底部间距 */
+        /* 添加以下样式以增加两个span之间的间距 */
+        /* justify-content: space-between; */
+        /* 或者使用 padding 或 margin，根据你的需求 */
+        
+    }
+
+    .news-item-left {
+        flex: 0 0 auto; /* 保持固定宽度，不随内容伸缩（如果需要固定宽度的话） */
+        width: 200px; /* 请根据实际情况调整宽度 */
+        overflow: hidden; /* 隐藏超出部分，以防图片尺寸过大 */
+    }
+
+    .news-item-left img {
+        width: 100%; /* 图片宽度100%，以填满容器 */
+        height: auto; /* 保持图片原始宽高比 */
+        object-fit: cover; /* 使图片填充容器并保持比例，可能会裁剪 */
+        transition: all 0.3s ease; /* 添加过渡效果 */
+    }
+
+    .news-item-left img:hover {
+        border: 2px solid #f00; /* 更改边框颜色，例如红色 */
+        opacity: 0.8; /* 改变透明度，例如80% */
+    }
+
+    .news-item-right {
+        margin-left: 12px;
+        flex: 1; /* 让右侧区域占据剩余的空间 */
+    }
+    .footer {
+        display: flex;
+        align-items: flex-end; /* 使内容底部对齐 */
+        margin-top: auto; /* 自动添加顶部外边距，将内容推至底部 */
+        font-family: 'Pacifico', cursive; /* 使用 Pacifico 字体 */
+        font-size: 16px; /* 增大字体大小 */
+        color: #666; /* 使用较淡的颜色 */
+        gap: 10px; /* 添加 gap 样式，适用于 Flexbox 布局 */
+    }
+
+   /* 为新闻摘要和作家添加点击事件 */
+    .newsSummary, .footer span {
+        cursor: pointer; /* 添加手型光标提示可点击 */
+    }
+
+    /* 当鼠标点击摘要时，添加高亮类 */
+    .newsSummary:active, .footer span:active {
+        color: blue; /* 点击时变为蓝色 */
+    }
+
+    .footer span:last-child {
+        color: blue;
+    }
+     
+     
+</style>
+
+</html>

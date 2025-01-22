@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/axios.js"></script>
+    <script src="./lib/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Film Upload</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+                background-color: lightblue;
+            }
+    
+            form {
+                max-width: 600px;
+                margin: 0 auto;
+                background-color: #f9f9f9;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+            }
+    
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 40px;
+                color: rgb(248, 176, 22);
+            }
+    
+            label, input, textarea {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+                font-size: 16px;
+                padding: 8px;
+                box-sizing: border-box;
+            }
+    
+            input[type="file"] {
+                margin-bottom: 20px;
+            }
+    
+            button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                border-radius: 5px;
+            }
+    
+            button:hover {
+                background-color: #45a049;
+            }
+    
+            .error-message {
+                color: red;
+                font-size: 14px;
+                margin-top: -10px;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>上传电影</h2>
+        <form id="filmUploadForm" enctype="multipart/form-data">
+            <label for="filmType">电影类型：</label>
+            <input type="text" id="filmType" name="filmType" required>
+            <div class="error-message" id="filmTypeError"></div>
+    
+            <label for="filmTitle">电影标题：</label>
+            <input type="text" id="filmTitle" name="filmTitle" required>
+            <div class="error-message" id="filmTitleError"></div>
+    
+            <label for="filmIntroduction">电影简介：</label>
+            <textarea id="filmIntroduction" name="filmIntroduction" required></textarea>
+            <div class="error-message" id="filmIntroductionError"></div>
+    
+            <label for="filmDirector">导演：</label>
+            <input type="text" id="filmDirector" name="filmDirector" required>
+            <div class="error-message" id="filmDirectorError"></div>
+    
+            <label for="filmPerformer">主演：</label>
+            <input type="text" id="filmPerformer" name="filmPerformer" required>
+            <div class="error-message" id="filmPerformerError"></div>
+    
+            <label for="releaseTime">上映时间：</label>
+            <input type="datetime-local" id="releaseTime" name="releaseTime" required>
+            <div class="error-message" id="releaseTimeError"></div>
+    
+            <label for="videoFile">视频文件：</label>
+            <input type="file" id="videoFile" name="videoFile" accept="video/*" required>
+            <div class="error-message" id="videoFileError"></div>
+    
+            <label for="coverImage">封面图片：</label>
+            <input type="file" id="coverImage" name="coverImage" accept="image/*" required>
+            <div class="error-message" id="coverImageError"></div>
+    
+            <button type="submit">上传电影</button>
+        </form>
+    
+        <script>
+            document.getElementById('filmUploadForm').addEventListener('submit', async (event) => {
+                event.preventDefault(); // 阻止默认表单提交行为
+    
+                const formData = new FormData(event.target);
+    
+                try {
+                    const response = await fetch('http://localhost:5180/api/film/upload', {
+                        method: 'POST',
+                        body: formData
+                    });
+    
+                    const result = await response.text();
+                    alert(result);
+                } catch (error) {
+                    alert('上传失败，请检查网络或文件');
+                    console.error(error);
+                }
+            });
+        </script>
+    </body>
+    </html>

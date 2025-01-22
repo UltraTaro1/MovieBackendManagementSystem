@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>视频播放</title>
+<script src="./lib/axios.js"></script>
+    <script src="./lib/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<style>
+    body {
+        /* background-color: #f5f5f5; 设置页面背景颜色 */
+        background-image: url('./Image/a.png'); /* 设置背景图片 */
+        background-size: cover; /* 使背景图片覆盖整个页面 */
+        background-position: center; /* 居中背景图片 */
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        /* border: 1px solid #ccc; */
+        /* border-radius: 5px; */
+        text-align: center;
+        /* background-color: rgba(255, 255, 255,0); 设置容器透明背景色 */
+    }
+
+    video {
+        width: 800px;
+        height: 450px;
+        border-radius: 5px; /* 圆角视频容器 */
+        object-fit: contain; /* 保持原始宽高比，内容适应容器 */
+    }
+
+    h2 {
+        color: #e8e2e2;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+</style>
+<script>
+    // 在 FilmPlay.html 的 JavaScript 中
+    window.onload = function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const filmId = urlParams.get('filmId');
+
+        if (filmId) {
+            // 使用获取到的 filmId
+            console.log('FilmId:', filmId);
+            // 这里可以进行进一步的处理，例如初始化页面内容等
+        } else {
+            console.error('No filmId found in the URL.');
+        }
+    };
+    </script>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <video :src="film.videoPath" controls></video>
+            <h2>电影简介：</h2>
+            <font color="aliceblue" v-text="film.filmIntroduction"></font>
+        </div>
+    </div>
+    
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                film:[]
+            },
+            mounted(){
+                const urlParams = new URLSearchParams(window.location.search);
+                const filmId = parseInt(urlParams.get('filmId'), 10); 
+                axios.get(`http://localhost:5180/api/Film/searchFilmById/${filmId}`).then(function(res){
+                    vm.film = res.data;
+                    console.log(res.data);
+                })
+            },
+        })
+    </script>
+</body>
+</html>
