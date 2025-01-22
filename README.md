@@ -9,6 +9,6 @@
     4.影片管理：对上传影片的详细信息进行管理
     5.新闻管理：管理新闻信息并提供浏览功能
 #### 效果展示：
-    ![alt text](./系统效果图/image.png)
-    ![alt text](./系统效果图/image-1.png)
-    ![alt text](./系统效果图/image-2.png)
+    ![image](./系统效果图/image.png)
+    ![image1](./系统效果图/image-1.png)
+    ![image2](./系统效果图/image-2.png)
